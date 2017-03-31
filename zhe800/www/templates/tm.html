@@ -1,0 +1,126 @@
+<ion-view>	
+	<ion-header-bar align-title="left" class="head">
+	  <h1 class="title bj"></h1>
+	  <div class="buttons">
+	    <button class="button ss"><a href=""></a></button>
+	  </div>
+	</ion-header-bar>
+	<ion-content>
+		<div class="row row5">
+			<div class="col col-15 ts">推荐</div>	
+	<ion-scroll style="width: 100%; height:2.8rem" class="col col-80">	 
+	    <!--<div class="row row1">	
+	    	<div class="col col-20">女装</div>
+			<div class="col col-20">鞋包</div>
+			<div class="col col-20">居家</div>
+			<div class="col col col-40">母婴儿童</div>
+			<div class="col col-20">美食</div>
+	    	<div class="col col-20">男装</div>
+			<div class="col col-20">内衣</div>
+			<div class="col col-20">配饰</div>
+			<div class="col col col-40">数码家电</div>
+			<div class="col col-20">美妆</div>
+	    	<div class="col col-20">家纺</div>
+			<div class="col col-20">运动</div>
+			<div class="col col-25">中老年</div>
+	    </div>-->
+	    <p class="p0">女装 鞋包 居家 母婴儿童 美食 男装 内衣 配饰 数码家电 美妆 家纺 运动 中老年</p>
+	</ion-scroll>
+	
+	<div class="col col-5 col2">&gt</div>
+  	</div>
+    <ion-slide-box auto-play="true" slide-interval="2000" does-continue="true">
+		  <ion-slide>
+		    <div class="box"><img src="img/pic_001.png"/></div>
+		  </ion-slide>
+		  <ion-slide>
+		    <div class="box"><img src="img/pic_002.png"/></div>
+		  </ion-slide>
+		  <ion-slide>
+		    <div class="box"><img src="img/pic_003.png"/></div>
+		  </ion-slide>
+		  <ion-slide>
+		    <div class="box"><img src="img/pic_004.png"/></div>
+		  </ion-slide>
+		  <ion-slide>
+		    <div class="box"><img src="img/pic_005.png"/></div>
+		  </ion-slide>
+		  <ion-slide on-slide-changed="slideHasChanged(index)">
+		    <div class="box"><img src="img/pic_006.png"/></div>
+		  </ion-slide>
+		</ion-slide-box>
+		
+		<div class="row row3">
+		  <div class="col col-20">
+		  	<p class="tp"><img src="img/pic_007.png"></p>
+		  	<p class="ds">微信红包</p>
+		  </div>
+		  <div class="col col-20">
+		  	<p class="tp"><img src="img/pic_008.png"></p>
+		  	<p class="ds">9.9包邮</p>
+		  </div>
+		  <div class="col col-20">
+		  	<p class="tp"><img src="img/pic_009.png"></p>
+		  	<p class="ds">优品汇</p>
+		  </div>
+		  <div class="col col-20">
+		  	<p class="tp"><img src="img/pic_010.png"></p>
+		  	<p class="ds">品牌团</p>
+		  </div>
+		  <div class="col col-20">
+		  	<p class="tp"><img src="img/pic_011.png"></p>
+		  	<p class="ds">精选报告</p>
+		  </div>
+		</div>
+		
+		<div class="row6">
+			<div class="d1" ng-repeat="item in list.dt">
+				<img src="{{item.img}}"/>
+			</div>
+			<div class="d2" ng-repeat="item in list.first">
+				<img src="{{item.img}}" />
+			</div>
+			<div class="d3">
+				<div class="d4" ng-repeat="item in list.sec">
+					<img src="{{item.img}}" />
+				</div>
+			</div>
+			<div class="d5" ng-repeat="item in list.thr">
+				<img src="{{item.img}}" />
+			</div>
+			
+		</div>
+			<div class="d6" ng-repeat="item in list.last">
+				<img src="{{item.img}}"/>
+			</div>				
+		<div id="d7">
+			<ul id ="aa" >
+				<li ng-click="tap()">超值好货</li>
+				<li ng-click="tap1()">热门品牌</li>
+			</ul>	
+			
+			<div ng-repeat="item in list.lis" ng-show="a" ng-click="tap5()">
+				<div class="tp0">
+					<a href="#/tab/tm/{{item.id}}"><p class="p1"><img src="{{item.img}}"/></p></a>
+					<p class="p2">{{item.name}}</p>
+					<p class="p3">
+						<span>{{item.pir}}</span>
+						<span>{{item.nn}}</span>
+					</p>
+				</div>
+			</div>
+			<div ng-repeat="item in list.lis1" ng-hide="a">
+				<div  class="tp0 tp1" >
+					<a href="#/tab/tm/{{id}}"><p class="p11"><img src="{{item.img}}"/></p></a>
+					<p class="p2">{{item.name}}</p>
+					<p class="p3">
+						<span>{{item.pir}}</span>
+						<span>{{item.nn}}</span>
+					</p>
+				</div>
+			</div>
+		</div>	
+	</ion-content>
+</ion-view>		
+		
+	
